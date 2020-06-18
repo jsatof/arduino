@@ -2,15 +2,15 @@
 #include <util/delay.h>
 #include <stdbool.h>
 
+#define BLINK_MS 150
+
 int main() {
-	DDRB |= 0b00100000; // pin mode for port B
+	// pin mode for port B, set to output mode
+	DDRB |= _BV(PORTB5); 
 
 	while(true) {
-		PORTB |= 0b00100000;
-
-		_delay_ms(BLINK_MS);
-
-		PORTB &= ~0b0010000;
+		// toggle LED on/off (as opposed to turn on, then turn off)
+		PORTB ^= _BV(PORTB5);
 		_delay_ms(BLINK_MS);
 	}
 
