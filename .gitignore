@@ -1,0 +1,3 @@
+# ignore generated .o and .hex files
+*.o
+*.hex
