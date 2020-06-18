@@ -1,3 +1,5 @@
+// Code originally written, and inspired, by Jacob Sorber
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdbool.h>
@@ -30,7 +32,7 @@ int main() {
 	sei();	// enable interupts
 
 	while(true) {
-	
+		// can insert any other computation stuff in here 
 	}
 
 
